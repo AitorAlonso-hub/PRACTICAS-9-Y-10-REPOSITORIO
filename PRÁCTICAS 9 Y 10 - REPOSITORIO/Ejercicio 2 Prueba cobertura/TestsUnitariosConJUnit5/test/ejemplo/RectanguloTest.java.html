@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>RectanguloTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">RectanguloTest (7 may 2026 21:54:44)</a> &gt; <a href="../../index.html" class="el_group">TestsUnitariosConJUnit5</a> &gt; <a href="../index.html" class="el_bundle">test</a> &gt; <a href="index.source.html" class="el_package">ejemplo</a> &gt; <span class="el_source">RectanguloTest.java</span></div><h1>RectanguloTest.java</h1><pre class="source lang-java linenums">package ejemplo;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+<span class="fc" id="L7">class RectanguloTest {</span>
+
+	@Test
+    void testCasuisticas() {
+<span class="fc" id="L11">        Rectangulo rPositivo = new Rectangulo(3, 4);</span>
+<span class="fc" id="L12">        Rectangulo rNegativo = new Rectangulo(-3, 4);</span>
+<span class="fc" id="L13">        Rectangulo rCero = new Rectangulo(0, 5);</span>
+
+<span class="fc" id="L15">        assertAll(</span>
+            // Valores positivos
+<span class="fc" id="L17">            () -&gt; assertEquals(12, rPositivo.area(), &quot;Positivos: área&quot;),</span>
+<span class="fc" id="L18">            () -&gt; assertEquals(14, rPositivo.perimetro(), &quot;Positivos: perímetro&quot;),</span>
+            
+            // Valores negativos (debe devolver -1)
+<span class="fc" id="L21">            () -&gt; assertEquals(-1, rNegativo.area(), &quot;Negativos: área debe ser -1&quot;),</span>
+<span class="fc" id="L22">            () -&gt; assertEquals(-1, rNegativo.perimetro(), &quot;Negativos: perímetro debe ser -1&quot;),</span>
+            
+            // Valores cero (debe devolver 0)
+<span class="fc" id="L25">            () -&gt; assertEquals(0, rCero.area(), &quot;Cero: área debe ser 0&quot;),</span>
+<span class="fc" id="L26">            () -&gt; assertEquals(0, rCero.perimetro(), &quot;Cero: perímetro debe ser 0&quot;)</span>
+        );
+<span class="fc" id="L28">	}</span>
+
+	@Test
+	void testParaCoberturaTotal() {
+		// Valores positivos	    
+<span class="fc" id="L33">		Rectangulo rPositivo = new Rectangulo(3, 4);</span>
+<span class="fc" id="L34">	    assertEquals(12, rPositivo.area());</span>
+<span class="fc" id="L35">	    assertEquals(14, rPositivo.perimetro());</span>
+
+	    // Valores negativos (debe devolver -1)
+<span class="fc" id="L38">	    Rectangulo rNegatio = new Rectangulo(-2, 5);</span>
+<span class="fc" id="L39">	    assertEquals(-1, rNegatio.area());</span>
+<span class="fc" id="L40">	    assertEquals(-1, rNegatio.perimetro());</span>
+
+	    // Valores cero (debe devolver 0)
+<span class="fc" id="L43">	    Rectangulo rCero = new Rectangulo(0, 8);</span>
+<span class="fc" id="L44">	    assertEquals(0, rCero.area());</span>
+<span class="fc" id="L45">	    assertEquals(0, rCero.perimetro());</span>
+<span class="fc" id="L46">	}</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span>RectanguloTest (7 may 2026 21:54:44)</div></body></html>
