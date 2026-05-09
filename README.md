@@ -1,5 +1,5 @@
 # 🚀 Prácticas temas 9 y 10 de Entornos de Desarrollo
-## ✅ Aquí está la carpeta "" con los 5 ejercicios
+## ✅ Aquí está la carpeta con los 5 ejercicios
 -  **Ejercicio 1 Tests unitarios con JUnit 5**: Pruebas unitarias para área y perímetro.
 -  **Ejercicio 2 Prueba cobertura**: Cobertura de código al 100%.
 -  **Ejercicio 3 Sonarlint en acción**: Limpieza de código y cumplimiento de reglas.
